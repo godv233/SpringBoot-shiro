@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+</head>
+<body>
+<h3>登录FBI</h3>
+<h3 style="color: red" th:text="${message}"/>
+<form method="post" action="/toLogin">
+    用户名：<input type="text" name="name"/><br/>
+    密码：<input type="text" name="password"/><br/>
+    <input type="submit" value="登录">
+</form>
+
+</body>
+</html>
