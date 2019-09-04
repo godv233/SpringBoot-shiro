@@ -5,4 +5,7 @@
     <select id="getUserByName" parameterType="string" resultType="com.example.demo.domain.User">
         select * from user where username=#{username}
     </select>
+    <select id="getUserById" resultType="com.example.demo.domain.User">
+        select * from user where userid=#{id}
+    </select>
 </mapper>

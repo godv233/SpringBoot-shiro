@@ -11,4 +11,5 @@ public class User {
     private Integer userid;
     private String username;
     private String userpassword;
+    private String perms;
 }

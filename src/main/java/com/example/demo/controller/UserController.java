@@ -21,8 +21,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
     @Autowired
     private UserService userService;
-
-
     /**
      * 测试环境搭建
      *
@@ -90,6 +88,11 @@ public class UserController {
             //直接跳转到页面，而不是controller方法
             return "/login";
         }
+    }
+
+    @RequestMapping("/unAuth")
+    public String unAuth(){
+        return "/unAuth";
     }
 
 
