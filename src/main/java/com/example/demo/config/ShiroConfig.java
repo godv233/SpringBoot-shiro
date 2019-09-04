@@ -65,6 +65,7 @@ public class ShiroConfig {
         filterMap.put("/update", "authc");
         //放行url
         filterMap.put("/test", "anon");
+        filterMap.put("/hello","anon");
         filterMap.put("/toLogin","anon");
 
         //通配符，使得 所有资源都被拦截

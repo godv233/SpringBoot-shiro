@@ -37,7 +37,7 @@ public class UserRealm  extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         System.out.println("执行认证逻辑");
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-        User user = userService.getUserByName(token.getUsername());
+        User user = userService.getUser(token.getUsername());
         //编写shiro的判断逻辑，判断用户名和密码是否正确
         AuthenticationInfo authenticationInfo=null;
         //1.判断用户名
@@ -45,7 +45,7 @@ public class UserRealm  extends AuthorizingRealm {
             System.out.println("用户名不正确");
             //返回null,底层会抛出UnknownAccountException
         }else {
-            authenticationInfo=new SimpleAuthenticationInfo("",user.getPassword(),"");
+            authenticationInfo=new SimpleAuthenticationInfo("",user.getUserpassword(),"");
         }
         return authenticationInfo;
 

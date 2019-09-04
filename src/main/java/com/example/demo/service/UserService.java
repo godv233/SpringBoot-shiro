@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.User;
-import com.example.demo.mapper.dal.UserMapper;
+import com.example.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,14 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserService {
     @Autowired
     private UserMapper userMapper;
-
-    /**
-     *
-     * @param name
-     * @return
-     */
-    public User getUserByName(String name){
-        return userMapper.getByUsername(name);
+    public User getUser(String username){
+        return userMapper.getUserByName(username);
     }
 }
 

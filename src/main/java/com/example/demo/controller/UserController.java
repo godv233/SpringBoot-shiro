@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.domain.User;
 import com.example.demo.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -29,8 +30,8 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping("/hello")
-    public String hello() {
-        return "ok";
+    public User hello() {
+        return userService.getUser("111");
     }
 
     @RequestMapping("/test")

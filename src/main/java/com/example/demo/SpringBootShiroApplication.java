@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author GODV
  */
 @SpringBootApplication
-@MapperScan("com.example.demo.mapper.dal")
-
+@MapperScan("com.example.demo.mapper")
 public class SpringBootShiroApplication {
 
     public static void main(String[] args) {
